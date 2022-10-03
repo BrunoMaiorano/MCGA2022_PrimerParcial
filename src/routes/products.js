@@ -4,8 +4,8 @@ const productController = require('../controllers/products');
 router.get('/', productController.getALLProducts)
 router.get('/:id', productController.getProductByPk)
 router.post('/create', productController.createProduct)
-router.delete('/delete', productController.removeProduct)
-router.put('/update', productController.updateProduct)
+router.delete('/delete/:id', productController.removeProduct)
+router.put('/update/:id', productController.updateProduct) //put(completo) o path(una parte)
 
 module.exports = router;
 
