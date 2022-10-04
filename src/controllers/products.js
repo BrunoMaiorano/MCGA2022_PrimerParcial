@@ -50,17 +50,18 @@ const controller = {
   },
   //Modificar un Producto por id
   updateProduct: (req, res) => {
-    const productMd = {
-      name: req.body.name,
-      price: req.body.price,
-      stock: req.body.stock,
-      description: req.body.description,
-    };
-    product
-      .findByIdAndUpdate(req.params.id, productMd)
+
+    const productID = req.params.id
+
+/*     product
+      .findByIdAndUpdate(productID, {
+        name: req.body.name,
+        price: req.body.price,
+        stock: req.body.stock,
+        description: req.body.description
+      })
       .then((data) => res.status(201).json({ msg: "Product updated:", data }))
-      .catch((err) => res.status(400).json({ msg: `Error: ${err}` }));
-    console.log(productMd)
+      .catch((err) => res.status(400).json({ msg: `Error: ${err}` })); */
     },
 };
 

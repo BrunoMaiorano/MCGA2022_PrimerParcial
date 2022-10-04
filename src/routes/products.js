@@ -5,7 +5,7 @@ router.get('/', productController.getALLProducts)
 router.get('/:id', productController.getProductByPk)
 router.post('/create', productController.createProduct)
 router.delete('/delete/:id', productController.removeProduct)
-router.put('/update/:id', productController.updateProduct) //put(completo) o path(una parte)
+router.patch('/update/:id', productController.updateProduct) //put(completo) o path(una parte)
 
 module.exports = router;
 
